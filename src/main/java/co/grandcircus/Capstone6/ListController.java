@@ -93,8 +93,6 @@ public class ListController {
 		else{
 			complete = true;}
 		
-	    System.out.print(id);
-	    System.out.print(complete);
 	    Optional<Task> updateTask = taskRepo.findById(id);
 	    Task task = new Task();
 	    task = updateTask.get();
@@ -103,6 +101,13 @@ public class ListController {
 		return "redirect:/my-task";
 	}
 	
+	@RequestMapping("/delete")
+	public String delete(@RequestParam("id") Long id, Model model) { 
+		
+		taskRepo.deleteById(id);
+		
+		return "redirect:/my-task";
+	}
 	
 
 	@RequestMapping ("/my-task")

@@ -28,6 +28,9 @@
     </td>
     <td>${task.description}</td>
     <td>${task.dueDate}</td>
+    <td>
+    <a href="/delete?id=${task.id}">&#128465;</a>
+    </td>
   </tr>
   </c:forEach> 
 </table>
