@@ -37,6 +37,7 @@ public class ListController {
 	@RequestMapping("/")
 	public String welcomeOrLogin(Model model) {
 		if (session.getAttribute("user") !=null) {
+			
 			return "welcome";
 		}else {
 			return "login";
@@ -49,6 +50,11 @@ public class ListController {
 		Optional<User> foundUser = userRepo.findByEmailAndPassword(email, password);
 		if(foundUser.isPresent()) {
 			session.setAttribute("user", foundUser.get());
+			User user = new User();
+			user = foundUser.get();
+			String theme = user.getTheme();
+			model.addAttribute("theme",theme);
+			System.out.print(theme);
 			return "redirect:/";
 		} else {
 			model.addAttribute("message", "Incorrect email or password.");

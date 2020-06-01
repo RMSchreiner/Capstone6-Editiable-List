@@ -4,12 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- CSS only -->
+
+<link rel="stylesheet" href="bootstrap.css">
 <meta charset="ISO-8859-1">
 <title>Create an Account</title>
 </head>
 <body>
 
-
+ <div class="container">
+ 
 <h1> Fill in the fields below </h1>
 <h2>${message}</h2>
 
@@ -26,11 +30,13 @@
   <label for="light">Light</label>
   <input type="radio" id="light" name="theme" value="white"><br>
     <label for="dark">Dark</label>
-  <input type="radio" id="dark" name="theme" value="black">
+  <input type="radio" id="dark" name="theme" value="grey">
   <br><br>
   <input type="submit" value="Submit">
   
 </form> 
 
+ </div>
+ 
 </body>
 </html>

@@ -4,12 +4,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- CSS only -->
+
+<link rel="stylesheet" href="bootstrap.css">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+body{background-color:${theme};}
+</style>
 </head>
 <body>
+ <div class="container">
 <h2>Welcome</h2>
+<p>${theme}</p>
 <br>
 <a href = "/my-task">Go to your task</a>
+</div>
+
 </body>
 </html>

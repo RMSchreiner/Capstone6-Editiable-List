@@ -4,10 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- CSS only -->
+
+<link rel="stylesheet" href="bootstrap.css">
 <meta charset="ISO-8859-1">
 <title>My Tasks</title>
 </head>
 <body>
+
+ <div class="container">
 
 <table>
   <tr>
@@ -37,5 +42,7 @@
 
 <a href = "/add-task">Add a new Task.</a>
 
+
+</div>
 </body>
 </html>
